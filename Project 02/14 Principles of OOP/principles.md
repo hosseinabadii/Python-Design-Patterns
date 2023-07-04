@@ -1,0 +1,5 @@
+- ## You can combine Functional and Object-Oriented programming.
+- ## Make classes either data-oriented or behavior-oriented.
+- ## Be careful with inheritance (Try to use for abstract classes - dependency inversion)
+- ## Use dependency injection (Use composite)
+- ## Don't abouse Python power features (dunder methods)
