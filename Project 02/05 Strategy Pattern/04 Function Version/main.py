@@ -2,11 +2,22 @@ from support.app import CustomerSupport
 from support.ticket import SupportTicket
 
 
+# This works because the __call__ makes it Callable
+class BlackHoleStrategy:
+    def __call__(self, tickets: list[SupportTicket]) -> list[SupportTicket]:
+        return []
+
+
+# same thing but using a function
+def blackHoleStrategy(tickets: list[SupportTicket]) -> list[SupportTicket]:
+    return []
+
+
 def main():
     # create the application
     app = CustomerSupport()
 
-    # register a few tickets
+    # create a few tickets
     app.add_ticket(SupportTicket("John Smith", "My computer makes strange sounds!"))
     app.add_ticket(
         SupportTicket("Linus Sebastian", "I can't upload any videos, please help.")
@@ -16,7 +27,8 @@ def main():
     )
 
     # process the tickets
-    app.process_tickets("fifo")
+    # app.process_tickets(BlackHoleStrategy())
+    app.process_tickets(blackHoleStrategy)
 
 
 if __name__ == "__main__":
