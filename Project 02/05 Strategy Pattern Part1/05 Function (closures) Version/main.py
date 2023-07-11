@@ -1,12 +1,6 @@
 from support.app import CustomerSupport, random_strategy_generator
 from support.ticket import SupportTicket
 
-
-class BlackHoleStrategy:
-    def __call__(self, tickets: list[SupportTicket]) -> list[SupportTicket]:
-        return []
-
-
 def main():
     # create the application
     app = CustomerSupport()

@@ -1,11 +1,5 @@
-from support.app import CustomerSupport
+from support.app import CustomerSupport, FIFOOrderingStrategy, FILOOrderingStrategy, RandomOrderingStrategy
 from support.ticket import SupportTicket
-
-
-class BlackHoleStrategy:
-    def create_ordering(self, tickets: list[SupportTicket]) -> list[SupportTicket]:
-        return []
-
 
 def main():
     # create the application
@@ -21,7 +15,7 @@ def main():
     )
 
     # process the tickets
-    app.process_tickets(BlackHoleStrategy())
+    app.process_tickets(FIFOOrderingStrategy())
 
 
 if __name__ == "__main__":
