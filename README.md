@@ -1,4 +1,4 @@
-# Python-Design-Patterns
+# Python Design Patterns
 Design patterns are reusable solutions to common problems in software design. They are typically organized into three main categories: **creational** patterns, **structural** patterns, and **behavioral** patterns.
 
 ## 1. Creational Patterns: 
@@ -30,7 +30,7 @@ These patterns deal with object communication, focusing on how objects interact 
 - `Command Pattern`: Encapsulates a request as an object, allowing it to be queued, logged, or undone.
 - `Interpreter Pattern`: Defines a grammar for a language and an interpreter to parse and execute expressions in that language.
 - `Iterator Pattern`: Provides a way to iterate over a collection of objects without exposing the underlying representation.
-- `Template Pattern`: Defines the skeleton of an algorithm in a base class, allowing subclasses to provide concrete implementations of certain steps.
+- `Template Method Pattern`: Defines the skeleton of an algorithm in a base class, allowing subclasses to provide concrete implementations of certain steps.
 - `Mediator Pattern`: Defines an object that encapsulates the way a set of objects interact, allowing them to communicate without knowing about each other.
 - `Memento Pattern`: Allows you to capture and restore an object's internal state without exposing its implementation details.
 - `State Pattern`: Allows an object to change its behavior when its internal state changes.

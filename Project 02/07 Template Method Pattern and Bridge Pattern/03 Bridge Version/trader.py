@@ -2,6 +2,7 @@ from typing import List
 from abc import ABC, abstractclassmethod
 from exchange import Exchange
 
+# Bridge: the Trader ABC class has a reference of Exchange ABC class.
 
 class Trader(ABC):
     def __init__(self, exchange: Exchange):
